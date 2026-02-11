@@ -4,8 +4,15 @@ import userRouter from "./routes/user.routes.js";
 import authRouter from "./routes/auth.routes.js";
 import subscriptionRouter from "./routes/subscription.routes.js";
 import connectToDatabase from "./database/mongodb.js";
+import errorMiddlware from "./middlewares/error.middleware.js";
+import cookieParser from "cookie-parser";
 
 const app = e();
+
+app.use(e.json());
+app.use(e.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(errorMiddlware);
 
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/users", userRouter);
