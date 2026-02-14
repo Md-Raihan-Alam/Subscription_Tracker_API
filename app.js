@@ -6,12 +6,14 @@ import subscriptionRouter from "./routes/subscription.routes.js";
 import connectToDatabase from "./database/mongodb.js";
 import errorMiddlware from "./middlewares/error.middleware.js";
 import cookieParser from "cookie-parser";
+import arcjetMiddleware from "./middlewares/arcjet.middleware.js";
 
 const app = e();
 
 app.use(e.json());
 app.use(e.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(arcjetMiddleware);
 app.use(errorMiddlware);
 
 app.use("/api/v1/auth", authRouter);
