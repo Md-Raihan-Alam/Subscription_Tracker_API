@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 const subscriptionSchema = new mongoose.Schema(
   {
     name: {
+      type: String,
       trim: true,
       minLength: 2,
       maxLength: 100,
