@@ -1,6 +1,6 @@
 {
   "name": "subscription-tracker-api",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,25 +8,21 @@
     "dev": "nodemon app.js"
   },
   "dependencies": {
-    "@arcjet/inspect": "^1.1.0",
     "@arcjet/node": "^1.1.0",
     "@upstash/workflow": "^1.1.1",
+    "arcjet": "^1.1.0",
     "bcryptjs": "^3.0.3",
-    "cookie-parser": "~1.4.4",
+    "cookie-parser": "^1.4.6",
     "dayjs": "^1.11.19",
-    "debug": "~2.6.9",
     "dotenv": "^17.2.4",
-    "express": "~4.16.1",
+    "express": "^4.18.2",
     "jsonwebtoken": "^9.0.3",
-    "mongodb": "^7.1.0",
     "mongoose": "^9.1.6",
-    "morgan": "~1.9.1",
-    "nodemailer": "^8.0.4"
+    "nodemailer": "^8.0.4",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.2",
-    "eslint": "^9.39.2",
-    "globals": "^17.3.0",
     "nodemon": "^3.1.11"
   }
 }
