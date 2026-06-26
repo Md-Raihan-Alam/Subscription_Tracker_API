@@ -16,4 +16,5 @@ const arcjetMiddleware = async (req, res, next) => {
     next(error);
   }
 };
+
 export default arcjetMiddleware;
