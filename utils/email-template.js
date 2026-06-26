@@ -17,7 +17,7 @@ export const generateEmailTemplate = ({
               </td>
           </tr>
           <tr>
-              <td style="padding: 40px 30px;">                
+              <td style="padding: 40px 30px;">
                   <p style="font-size: 16px; margin-bottom: 25px;">Hello <strong style="color: #4a90e2;">${userName}</strong>,</p>
                   
                   <p style="font-size: 16px; margin-bottom: 25px;">Your <strong>${subscriptionName}</strong> subscription is set to renew on <strong style="color: #4a90e2;">${renewalDate}</strong> (${daysLeft} days from today).</p>
@@ -82,7 +82,7 @@ export const emailTemplates = [
   {
     label: "2 days before reminder",
     generateSubject: (data) =>
-      `🚀 2 Days Left!  ${data.subscriptionName} Subscription Renewal`,
+      `🚀 2 Days Left! ${data.subscriptionName} Subscription Renewal`,
     generateBody: (data) => generateEmailTemplate({ ...data, daysLeft: 2 }),
   },
   {
